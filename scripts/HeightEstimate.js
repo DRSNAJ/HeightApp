@@ -1,5 +1,5 @@
     let degtorad = Math.PI / 180; // Degree-to-Radian conversion
-    let radtodeg = 1//180// / Math.PI; // Radian-to-Degree conversion
+    let radtodeg = 180 / Math.PI; // Radian-to-Degree conversion
 
     let errorRef = document.getElementsByClassName("error");
     // Given an HTML element class and a boolean representing
@@ -27,29 +27,29 @@
     //variable to store the object if sensor is available
     let accelerometer = null;
     // try-catch: exception handling
-    try
-    {
-        // initialising object for Accelerometer
-        accelerometer = new Accelerometer({ frequency: 10 });
+//     try
+//     {
+//         // initialising object for Accelerometer
+//         accelerometer = new Accelerometer({ frequency: 10 });
 
-        //if sensor is available but there is problem in using it
-        accelerometer.addEventListener('error', event => {
-        // Handle runtime errors.
-        if (event.error.name === 'NotAllowedError')
-        {
-          errorRef.innerText = "Permission to access sensor was denied.";
-        }
-        else if (event.error.name === 'NotReadableError' )
-        {
-          errorRef.innerText = "Cannot connect to the sensor.";
-        }});
+//         //if sensor is available but there is problem in using it
+//         accelerometer.addEventListener('error', event => {
+//         // Handle runtime errors.
+//         if (event.error.name === 'NotAllowedError')
+//         {
+//           errorRef.innerText = "Permission to access sensor was denied.";
+//         }
+//         else if (event.error.name === 'NotReadableError' )
+//         {
+//           errorRef.innerText = "Cannot connect to the sensor.";
+//         }});
 
-        // when sensor has a reading, call the function
-        accelerometer.addEventListener('reading', () => reloadAccelerometerValues(accelerometer));
+//         // when sensor has a reading, call the function
+//         accelerometer.addEventListener('reading', () => reloadAccelerometerValues(accelerometer));
 
-        //start the sensor
-        accelerometer.start();
-    }
+//         //start the sensor
+//         accelerometer.start();
+//     }
     catch (error)
     {
       // Handle construction errors.
@@ -70,18 +70,18 @@
     }
 
     // function to print value on the webpage
-    function reloadAccelerometerValues(accelerometer){
+//     function reloadAccelerometerValues(accelerometer){
 
-      let x = accelerometer.x;
-      let y = accelerometer.y;
-      let z = accelerometer.z;
+//       let x = accelerometer.x;
+//       let y = accelerometer.y;
+//       let z = accelerometer.z;
 
-      document.getElementById("aX").innerText = x.toFixed(2);
-      document.getElementById("aY").innerText = y.toFixed(2);
-      document.getElementById("aZ").innerText = z.toFixed(2);
-      document.getElementById("activated").innerText = accelerometer.activated;
-      document.getElementById("hasReading").innerText = accelerometer.hasReading;
-    }
+//       document.getElementById("aX").innerText = x.toFixed(2);
+//       document.getElementById("aY").innerText = y.toFixed(2);
+//       document.getElementById("aZ").innerText = z.toFixed(2);
+//       document.getElementById("activated").innerText = accelerometer.activated;
+//       document.getElementById("hasReading").innerText = accelerometer.hasReading;
+//     }
     // end: code for accelerometer
 
     // Start: code for device orientation
