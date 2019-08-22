@@ -24,9 +24,9 @@
 
     // Start: code for accelerometer
 
-    //variable to store the object if sensor is available
-    let accelerometer = null;
-    // try-catch: exception handling
+//     //variable to store the object if sensor is available
+//     let accelerometer = null;
+//     // try-catch: exception handling
 //     try
 //     {
 //         // initialising object for Accelerometer
@@ -50,24 +50,24 @@
 //         //start the sensor
 //         accelerometer.start();
 //     }
-    catch (error)
-    {
-      // Handle construction errors.
-      let errorText = "";
-      if (error.name === 'SecurityError')
-      {
-        errorText = "Sensor construction was blocked by the Feature Policy.";
-      }
-      else if (error.name === 'ReferenceError')
-      {
-        errorText =" Sensor is not supported by the User Agent.";
-      }
-      else
-      {
-        errorText = "Sensor not supported";
-      }
-      errorRef.innerText = errorText;
-    }
+//     catch (error)
+//     {
+//       // Handle construction errors.
+//       let errorText = "";
+//       if (error.name === 'SecurityError')
+//       {
+//         errorText = "Sensor construction was blocked by the Feature Policy.";
+//       }
+//       else if (error.name === 'ReferenceError')
+//       {
+//         errorText =" Sensor is not supported by the User Agent.";
+//       }
+//       else
+//       {
+//         errorText = "Sensor not supported";
+//       }
+//       errorRef.innerText = errorText;
+//     }
 
     // function to print value on the webpage
 //     function reloadAccelerometerValues(accelerometer){
