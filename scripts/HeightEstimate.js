@@ -109,9 +109,6 @@
                  gammaVec = [];
                 
             }
-     
-        document.getElementById("mActivated").innerText = deviceAbsolute.activated;
-        document.getElementById("mHasReading").innerText = deviceAbsolute.hasReading;
  }
 
 
