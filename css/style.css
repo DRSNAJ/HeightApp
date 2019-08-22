@@ -50,7 +50,7 @@ video#cameraVideo
 
 #video-container {
     /* view height, minus header bar height and bottom div */
-    height: calc(100vh - 510px);
+    height: calc(100vh - 150px);
     position: relative;
 }
 
