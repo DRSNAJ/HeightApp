@@ -1,5 +1,5 @@
     let degtorad = Math.PI / 180; // Degree-to-Radian conversion
-    let radtodeg = 180/ Math.PI; // Radian-to-Degree conversion
+    let radtodeg = 180 / Math.PI; // Radian-to-Degree conversion
 
     let errorRef = document.getElementsByClassName("error");
     // Given an HTML element class and a boolean representing
@@ -118,6 +118,11 @@
     {
         document.getElementById("baseAngle").innerText = calcAngle;
     }
+    
+    function setTop()
+    {
+        document.getElementById("topAngle").innerText = calcAngle;
+    }
 
 
     function heightInput()
@@ -125,4 +130,4 @@
         let userInput = prompt('Please input your height:');
         document.getElementById('heightOfCamera').innerText = userInput;
     }
-      
+     
