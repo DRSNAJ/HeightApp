@@ -27,7 +27,7 @@ html, body {
 
 video#cameraVideo
 {
-  height: calc(100vh - 400px);
+  background-size: cover;
   width: 100%;
 }
 
@@ -52,6 +52,7 @@ video#cameraVideo
     /* view height, minus header bar height and bottom div */
     height: calc(117vh - 510px);
     position: relative;
+    overflow: hidden;
 }
 
 .bg-video {
