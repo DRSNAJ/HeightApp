@@ -1,5 +1,5 @@
     let degtorad = Math.PI / 180; // Degree-to-Radian conversion
-    let radtodeg = 1//180// / Math.PI; // Radian-to-Degree conversion
+    let radtodeg = 180/ Math.PI; // Radian-to-Degree conversion
 
     let errorRef = document.getElementsByClassName("error");
     // Given an HTML element class and a boolean representing
@@ -71,6 +71,7 @@
     let  betaVec = [];
     let alphaVec = [];
     let gammaVec = [];
+    let calcAngle = 0;
 
     // function to print value on the webpage
     function reloadOrientationValues(deviceAbsolute)
@@ -102,7 +103,8 @@
                 document.getElementById("bValue").innerText = betaSum.toFixed(2);
                 document.getElementById("aValue").innerText = alphaSum.toFixed(2);
                 document.getElementById("gValue").innerText = gammaSum.toFixed(2);
-               
+                calcAngle = betaSum.toFixed(2);
+                
              
                  betaVec = [];
                  alphaVec = [];
@@ -111,11 +113,16 @@
             }
      
  }
+ 
+    function setBottom()
+    {
+        document.getElementById("baseAngle").innerText = calcAngle;
+    }
 
 
-function heightInput()
-{
-    let userInput = prompt('Please input your height:');
-    document.getElementById('heightOfCamera').innerText = userInput;
-}
+    function heightInput()
+    {
+        let userInput = prompt('Please input your height:');
+        document.getElementById('heightOfCamera').innerText = userInput;
+    }
       
